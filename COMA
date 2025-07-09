@@ -1,0 +1,16 @@
+// addition of two 16bit number in microprocessor
+MVI C,00H
+LDA 2051H
+MOV B,A
+LDA 2052H
+ADD B
+STA 2055H
+MOV D,A
+LDA 2054H
+ADC D
+JNC LOOP
+INR C
+LOOP: STA 2056H
+  MOV A,C
+  STA 2057H
+HLT    
